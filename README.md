@@ -16,6 +16,7 @@ And run `docker compose up -d`
 ## Backend
 
 To setup backend create .env file or add to it:
+```
 SECRET_KEY='SUPER_SECRET_KEY'
 DATABASE_URL='postgresql://username:password@your-db-url:5432/db-name'
-
+```
