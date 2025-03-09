@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Login',
     component: () => import('@/views/LoginForms.vue'),  // Dynamically import LoginPage.vue
   },
+    {
+    path: '/navbar',
+    name: 'NavBar',
+    component: () => import('@/views/NavBar.vue'),  // Dynamically import LoginPage.vue
+  },
   // Możesz dodać inne ścieżki tutaj
 ]
 
