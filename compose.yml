@@ -1,17 +1,24 @@
 services:
   postgres:
-    image: postgres
-    container_name: postgres-db
+    image: postgres:alpine
+    container_name: postgres
+    env_file: .env
     environment:
-      POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_MULTIPLE_DATABASES: ${POSTGRES_MULTIPLE_DATABASES}
     ports:
       - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./multiple-databases.sh:/docker-entrypoint-initdb.d/multiple-databases.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
     networks:
-      - my-network
+      - fnr-network
   
   pgadmin:
     image: dpage/pgadmin4
@@ -25,13 +32,19 @@ services:
     depends_on:
       - postgres
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-O", "-", "http://localhost:80/misc/ping"]
+      interval: 10s
+      timeout: 10s
+      start_period: 160s
+      retries: 3
     networks:
-      - my-network
+      - fnr-network
 
 volumes:
   postgres_data:
     driver: local
 
 networks:
-  my-network:
+  fnr-network:
     driver: bridge 

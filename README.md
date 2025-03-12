@@ -4,9 +4,9 @@
 
 To setup postgres db create .env file:
 ```
-POSTGRES_DB = 'freshready'
 POSTGRES_USER = 'postgres'
 POSTGRES_PASSWORD = 'postgres'
+POSTGRES_MULTIPLE_DATABASES = 'fnr, keycloak'
 PGADMIN_EMAIL: 'admin@example.com'
 PGADMIN_PASSWORD: 'admin'
 ```
