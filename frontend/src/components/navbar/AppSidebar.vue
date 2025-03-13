@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import NavMain from '@/components/NavMain.vue'
+import NavMain from '@/components/navbar/NavMain.vue'
 
-import NavProjects from '@/components/NavProjects.vue'
-import NavSecondary from '@/components/NavSecondary.vue'
-import NavUser from '@/components/NavUser.vue'
+import NavProjects from '@/components/navbar/NavProjects.vue'
+import NavSecondary from '@/components/navbar/NavSecondary.vue'
+import NavUser from '@/components/navbar/NavUser.vue'
 import {
   Sidebar,
   SidebarContent,
@@ -70,8 +70,8 @@ const data = {
       icon: Settings2,
       items: [
         {
-          title: 'General',
-          url: '#',
+          title: 'Użytkownicy',
+          url: '/user',
         },
         {
           title: 'Team',

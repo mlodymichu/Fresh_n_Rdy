@@ -36,7 +36,7 @@ import {
 } from '@tanstack/vue-table'
 import { ChevronDown, ChevronsUpDown } from 'lucide-vue-next'
 import { h, ref } from 'vue'
-import DropdownAction from '@/components/ui/table/'
+import DropdownAction from '@/components/ui/table'
        './DataTableDemoColumn.vue'
 
 export interface Payment {
