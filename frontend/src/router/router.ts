@@ -12,17 +12,17 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Login',
     component: () => import('@/views/LoginForms.vue'),
   },
-    {
-    path: '/navbar',
-    name: 'NavBar',
-    component: () => import('@/views/NavBar.vue'),
-  },
   {
     path: '/user',
     name: 'user',
     component: () => import('@/components/user/data-table-dropdown.vue')
-
   },
+    {
+    path: '/register',
+    name: 'register',
+    component: () => import('@/views/RegisterView.vue'),
+  },
+
 ]
 
 const router = createRouter({

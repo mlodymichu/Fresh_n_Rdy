@@ -37,6 +37,14 @@ import { Label } from '@/components/ui/label'
       <Button type="submit" class="w-full">
         Login
       </Button>
+      <div class="flex justify-center items-center">
+        <a
+        href="#"
+        class="ml-2 text-sm underline-offset-4 hover:underline"
+        >
+        You don't have an account? Create it!
+        </a>
+        </div>
       <div class="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
         <span class="relative z-10 bg-background px-2 text-muted-foreground">
           Or continue with

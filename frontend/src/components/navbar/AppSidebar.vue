@@ -15,16 +15,18 @@ import {
   type SidebarProps,
 } from '@/components/ui/sidebar'
 import {
+  AlertCircle,
+  BarChart,
   BookOpen,
-  Bot,
-  Command,
-  Frame,
+  Bot, Circle,
+  Command, Dot,
+  Frame, HelpCircle,
   LifeBuoy,
-  Map,
-  PieChart,
+  Map, MoreHorizontal, MoreVertical,
+  PieChart, Plus,
   Send,
-  Settings2,
-  SquareTerminal,
+  Settings2, SlidersHorizontal,
+  SquareTerminal, Wrench,
 } from 'lucide-vue-next'
 
 const props = withDefaults(defineProps<SidebarProps>(), {
@@ -41,18 +43,18 @@ const data = {
     {
       title: 'Dodaj łazienkę',
       url: '#',
-      icon: SquareTerminal,
+      icon: Plus,
       isActive: true,
     },
     {
       title: 'Edytuj łazienkę',
       url: '#',
-      icon: Bot,
+      icon: SlidersHorizontal,
     },
     {
       title: 'Statystyki',
       url: '#',
-      icon: BookOpen,
+      icon: BarChart,
       items: [
         {
           title: 'Wykresy',
@@ -67,11 +69,11 @@ const data = {
     {
       title: 'Ustawienia',
       url: '#',
-      icon: Settings2,
+      icon: Wrench,
       items: [
         {
-          title: 'Użytkownicy',
-          url: '/user',
+          title: 'General',
+          url: '#',
         },
         {
           title: 'Team',
@@ -92,7 +94,7 @@ const data = {
     {
       title: 'Pomoc',
       url: '#',
-      icon: LifeBuoy,
+      icon: HelpCircle,
     },
     {
       title: 'Kontakt',
@@ -104,17 +106,17 @@ const data = {
     {
       name: 'Łazienka 1',
       url: '#',
-      icon: Frame,
+      icon: Circle,
     },
     {
       name: 'Łazienka 2',
       url: '#',
-      icon: PieChart,
+      icon: Circle,
     },
     {
       name: 'Łazienka 3',
       url: '#',
-      icon: Map,
+      icon: Circle,
     },
   ],
 }

@@ -1,17 +1,3 @@
-<script lang="ts">
-export const description
-  = 'A sign up form with first name, last name, email and password inside a card. There\'s an option to sign up with GitHub and a link to login if you already have an account'
-export const iframeHeight = '600px'
-export const containerClass = 'w-full h-screen flex items-center justify-center px-4'
-</script>
-
-<script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-</script>
-
 <template>
   <Card class="mx-auto max-w-sm">
     <CardHeader>

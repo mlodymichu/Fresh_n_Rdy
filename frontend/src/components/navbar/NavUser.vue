@@ -27,6 +27,7 @@ import {
   CreditCard,
   LogOut,
   Sparkles,
+  User,
 } from 'lucide-vue-next'
 
 const props = defineProps<{
@@ -85,8 +86,8 @@ const { isMobile } = useSidebar()
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <BadgeCheck />
-              Twoje konto
+              <User />
+              Konto
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Bell />
