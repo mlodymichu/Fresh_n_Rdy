@@ -2,13 +2,16 @@
 
 ## Database
 
-To setup postgres db create .env file:
+To setup postgres, pgadmin & keycloak, create .env file:
 ```
+POSTGRES_DB_NAME_FNR = 'fnr'
+POSTGRES_DB_NAME_KC = 'keycloak'
 POSTGRES_USER = 'postgres'
-POSTGRES_PASSWORD = 'postgres'
-POSTGRES_MULTIPLE_DATABASES = 'fnr, keycloak'
-PGADMIN_EMAIL: 'admin@example.com'
-PGADMIN_PASSWORD: 'admin'
+POSTGRES_PASSWORD = 'password'
+PGADMIN_EMAIL = 'admin@example.com'
+PGADMIN_PASSWORD = 'password'
+KC_ADMIN = 'admin'
+KC_ADMIN_PASSWORD ='password' 
 ```
 And run `docker compose up -d`
 
