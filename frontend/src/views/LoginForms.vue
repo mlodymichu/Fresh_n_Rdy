@@ -24,7 +24,7 @@
       </div>
       <div class="relative hidden bg-muted lg:block">
         <img
-          src="@/components/icons/images.jpg"
+          src="../components/icons/image.png"
           alt="Image"
           class="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         >

@@ -1,6 +1,6 @@
 import { h } from 'vue'
 import {ColumnDef} from "@tanstack/vue-table";
-import {Payment} from "@/components/DataTable.vue";
+import {Payment} from "@/components/navbar/DataTable.vue";
 
 export const columns: ColumnDef<Payment>[] = [
   {
