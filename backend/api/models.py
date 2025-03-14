@@ -1,6 +1,27 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
+class User(AbstractUser):
+    class Role(models.TextChoices):
+        Admin = "ADMIN", "Admin"
+        Building_manager = "MANAGER", "Manager"
+        Janitor = "JANITOR", "Janitor"
+        Cleaning_staff = "CLEANING", "Cleaning_staff" #TODO: ZMIENIC NAZWE
+        Employee = "EMPLOYEE", "Employee"
+
+    base_role = Role.Admin
+
+    role = models.CharField(
+        max_length=50,
+        choices=Role.choices,
+        )
+    
+    def save(self,*args,**kwargs):
+        if not self.pk:
+            self.role = self.base_role
+            return super().save(*args,**kwargs)
+
 class Building(models.Model):
     name = models.CharField(max_length=250)
     is_private = models.BooleanField(default=True)
